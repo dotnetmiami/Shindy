@@ -9,10 +9,12 @@ Shindy is joined community effort to create and unify the way local User Groups 
 
 See our [Trello board](https://trello.com/board/shindy-user-group-web-app/515d8d0ceb07c5370f003e67)
 
+**Please note:** We use [Nuget package restore](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages)
+
 
 ### Coding guidelines
 
-Please our CodingGuidelines.md 
+Please our [CodingGuidelines.md ](https://github.com/dotnetmiami/Shindy/blob/master/CodingGuidelines.md)
 
 ### Project Workflow
 
