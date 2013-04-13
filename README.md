@@ -14,7 +14,7 @@ See our [Trello board](https://trello.com/board/shindy-user-group-web-app/515d8d
 
 ### Coding guidelines
 
-Please our [CodingGuidelines.md ](https://github.com/dotnetmiami/Shindy/blob/master/CodingGuidelines.md)
+Please our [Coding Guidelines](https://github.com/dotnetmiami/Shindy/blob/master/CodingGuidelines.md)
 
 ### Project Workflow
 
