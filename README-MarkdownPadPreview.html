@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: d5e7ce436666e7d4a2eeb12e7f8261dacceb3565 */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+.markdown-body img {
+  max-width: 100%
+}
+</style>
+
+</head>
+<body>
+<h1>Shindy</h1>
+<p>Shindy is joined community effort to create and unify the way local User Groups manage their events. </p>
+<p><em>More to be added...</em></p>
+<h2>Contributing</h2>
+<p>See our <a href="https://trello.com/board/shindy-user-group-web-app/515d8d0ceb07c5370f003e67">Trello board</a></p>
+<h3>Coding guidelines</h3>
+<p>Please our CodingGuidelines.md </p>
+<h3>Project Workflow</h3>
+<p>Our workflow is loosely based on <a href="http://scottchacon.com/2011/08/31/github-flow.html">Github Flow</a>. We actively develop in the <strong>dev</strong> branch. This means that all pull requests by contributors need to be developed and submitted to the dev branch.
+The master branch always matches the current release.</p>
+<p>When the end of a milestone is coming up, we create a branch called <strong>release</strong> to stabilize the build for the upcoming release.
+The release is then merged into master and deleted and the cycle continues until the end of the next milestone.</p>
+<h3>Submitting Pull requests</h3>
+<p>Make sure you can build the code. Familiarize yourself with the project workflow and our coding conventions. If you don't know what a pull request is
+read this <a href="https://help.github.com/articles/using-pull-requests">https://help.github.com/articles/using-pull-requests</a>.</p>
+<p><strong>Tests</strong></p>
+<ul>
+<li>We use <a href="http://xunit.codeplex.com/">XUnit</a> as testing framework</li>
+<li>Tests need to be provided for every bug/feature that is completed.</li>
+<li>Tests only need to be present for issues that need to be verified by QA (e.g. not tasks)</li>
+<li>If there is a scenario that is far too hard to test there does not need to be a test for it.</li>
+<li>&quot;Too hard&quot; is determined by the team as a whole.</li>
+</ul>
+<h2>The Git Workflow</h2>
+<p>This is the Git workflow we're currently using:</p>
+<h3>When starting a new feature/unit of work.</h3>
+<ol>
+<li>
+<p><strong>Pull the latest.</strong>
+Begin by pulling to make sure you are up-to-date before creating a branch to do your work 
+This assumes you have no local commits that haven't yet been pushed (i.e., that you were 
+previously up-to-date with origin).</p>
+<pre><code>git pull 
+</code></pre>
+
+</li>
+<li>
+<p><strong>Create a topic branch to do your work.</strong>
+Working in a topic branch isolates your work and makes it easy to bring in updates from
+other developers without cluttering the history with merge commits. You should generally
+be working in topic branches. If you do make changes in the master branch, just run this
+command before commiting them, creating the branch just in time.</p>
+<pre><code>git checkout -b &lt;topic branch&gt;
+</code></pre>
+
+</li>
+<li>
+<p><strong>Do your work.</strong>
+Follow this loop while making small changes and committing often.    
+</p>
+<ol>
+<li>Make changes.</li>
+<li>Test your changes (you're practicing TDD, right?)</li>
+<li>
+<p>Add your changes to git's index.</p>
+<pre><code>git add -A
+</code></pre>
+
+</li>
+<li>
+<p>Commit your changes.</p>
+<pre><code>git commit -m &quot;&lt;description of work&gt;&quot;
+</code></pre>
+
+</li>
+<li>
+<p>if (moreWorkToDo) go to #3.1 else go to #4.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Integrate changes from other developers.</strong> 
+Now you're finished with your feature or unit of work, and ready to push your changes, 
+you need to integrate changes that other developers may have pushed chances since you 
+started.</p>
+<p><strong>PRO TIP: CLOSE VISUAL STUDIO</strong></p>
+<p>There are a few steps to follow to make sure you keep the history clean as you integrate.</p>
+<ol>
+<li>
+<p><strong>Fetch changes from origin.</strong>
+Use <code>git fetch</code> instead of <code>git pull</code>, because <code>git pull</code> automatically tries to merge the 
+new changes with your local commits, creating an ugly (and useless) merge commit.</p>
+<pre><code>git fetch origin
+</code></pre>
+
+</li>
+<li>
+<p><strong>Rebase your topic branch against origin/master.</strong>
+You want to reolcated your changes on top of any changes that were pulled in the
+in the fetch, above. You need to do this against origin/master instead of 
+master, because master isn't yet up to date (remember, you're still in your
+topic branch).</p>
+<p>You might have rebase conflicts, in which case you'll need to resolve them before
+continuing with <code>git rebase --continue</code>. You might want to use <code>git mergetool</code> to help.</p>
+<pre><code>git rebase origin/master
+</code></pre>
+
+</li>
+<li>
+<p><strong>Test your changes with the new code integrated.</strong>
+This would be a good time to run your full suite of unit and integration tests.</p>
+<pre><code>git clean -xdf
+.\Build-Solution.ps1
+</code></pre>
+
+<p>The first command cleans any untracked files that could get in the way of a good commit.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Integrate your changes into the master branch.</strong>
+Now that your topic branch has a clean history, it's easy to use <code>git rebase</code> to integrate
+your changes into the master branch with the following three commands. Note that the 
+<code>git pull</code> will not create a merge commit, provided you haven't made any changes on master
+(e.g., that you followed the advice of making all changes in your topic branch).</p>
+<pre><code>git checkout master
+git pull
+git rebase &lt;topic branch&gt;
+</code></pre>
+
+</li>
+<li>
+<p><strong>Push changes.</strong>
+Now that you're master branch's history is correct and clean, you can push to origin.</p>
+<pre><code>git push origin
+</code></pre>
+
+</li>
+<li>
+<p><strong>Delete the topic branch</strong>
+The topic branch you created in Step #2 is no longer needed so it's best to delete it and 
+start with a new clean branch when you're ready to start your next unit of work.</p>
+<pre><code>git branch -d &lt;topic branch&gt;
+</code></pre>
+
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
