@@ -8,10 +8,12 @@ namespace Shindy.Data
 {
     public interface IPersonRepository
     {
-        PersonEntity Load(int id);
+        PersonEntity Retreive(int id);
 
-        int Create(PersonEntity person);
+        void Create(PersonEntity person);
 
         void Update(PersonEntity person);
+
+        void Delete(PersonEntity person);
     }
 }

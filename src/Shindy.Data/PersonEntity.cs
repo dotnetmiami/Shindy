@@ -66,7 +66,7 @@ namespace Shindy.Data
         {
             if (PersonID <= 0)
             {
-                PersonID = _repository.Create(this);
+                _repository.Create(this);
             }
             else
             {

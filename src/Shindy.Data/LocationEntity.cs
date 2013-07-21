@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Shindy.Data
 {
-    public class Event
+    public class LocationEntity
     {
+        public int LocationID { get; set; }
     }
 }
