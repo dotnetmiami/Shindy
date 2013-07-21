@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B24521
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Web", "src\Shindy.Web\Shindy.Web.csproj", "{6626349C-D2EE-4DED-B6A8-7CC5278F96CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Data", "Shindy.Data\Shindy.Data.csproj", "{22707717-7BB2-4F3B-98A1-18208F7C3979}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Data", "src\Shindy.Data\Shindy.Data.csproj", "{22707717-7BB2-4F3B-98A1-18208F7C3979}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

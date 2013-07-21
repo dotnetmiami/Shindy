@@ -23,6 +23,32 @@ namespace Shindy.Tests.Data
             //Assert
             Assert.True(person.PersonID > 0);
         }
+
+        [Fact]
+        public void RetreivePerson()
+        {
+            //Arrange
+
+            //Act
+            Person person = Person.Load(100);
+
+            //Assert
+            Assert.True(person.PersonID > 0);
+        }
+
+        [Fact]
+        public void UpdatePerson()
+        {
+            //Arrange
+            Person person = Person.Load(100);
+            person.Email = "patrick.timothee@gmail.com";
+
+            //Act
+            person.Persist();
+
+            //Assert
+            Assert.True(person.PersonID > 0);
+        }
     }
 
     //Please excuse my ignorance. I have never used Xunit before
@@ -33,7 +59,9 @@ namespace Shindy.Tests.Data
         public static void Main(string[] args)
         {
             PersonTests test = new PersonTests();
-            test.CreatePerson();
+            //test.CreatePerson();
+            test.RetreivePerson();
+            test.UpdatePerson();
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();

@@ -82,12 +82,39 @@ namespace Shindy.Data
 
         public static Person Load(int personId)
         {
-            throw new NotImplementedException();
+            var db = Database.Opener.OpenConnection(ConnectionString);
+
+            var person = db.Persons.FindByPerson_ID(personId);
+
+            return new Person(person.First_Name, person.Last_Name)
+            {
+                PersonID = person.Person_ID,
+                Email =  person.EMail,
+                MemberURI = person.Member_URI,
+                TwitterName = person.Twitter_Name,
+                LinkedinURI = person.Linkedin_URI,
+                Bio = person.Bio,
+                PhotoURI = person.Photo_URI,
+                Zip = person.Zip
+            };
         }
 
         public void Update()
         {
-            throw new NotImplementedException();
+            var db = Database.Opener.OpenConnection(ConnectionString);
+
+            var person = db.Persons.UpdateByPerson_ID(
+                Person_ID : PersonID,
+                First_Name: FirstName,
+                Last_Name: LastName,
+                EMail: Email,
+                Member_URI: MemberURI,
+                Twitter_Name: TwitterName,
+                Linkedin_URI: LinkedinURI,
+                Bio: Bio,
+                Photo_URI: PhotoURI,
+                Zip: Zip
+                );
         }
 
         public void Create()

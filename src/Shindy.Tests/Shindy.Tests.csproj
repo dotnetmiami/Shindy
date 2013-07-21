@@ -68,7 +68,7 @@
     <Folder Include="Web\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Shindy.Data\Shindy.Data.csproj">
+    <ProjectReference Include="..\Shindy.Data\Shindy.Data.csproj">
       <Project>{22707717-7bb2-4f3b-98a1-18208f7c3979}</Project>
       <Name>Shindy.Data</Name>
     </ProjectReference>
