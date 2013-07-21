@@ -8,13 +8,9 @@ namespace Shindy.Data
 {
     public static class EventManager
     {
-        public static void AddSpeaker(this Event evt, Person person)
+        public static void AddSpeaker(this Event evt, PersonEntity person)
         {
             throw new NotImplementedException();
         }
-
-
-
-    
     }
 }

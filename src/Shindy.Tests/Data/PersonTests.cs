@@ -14,7 +14,10 @@ namespace Shindy.Tests.Data
         public void CreatePerson()
         {
             //Arrange
-            Person person = new Person("Donald", "Duck");
+            PersonDataRepository repository = new PersonDataRepository();
+            PersonEntity person = new PersonEntity(repository);
+            person.FirstName = "Donald";
+            person.LastName = "Duck";
             person.Email = "donald.duck@disney.com";
 
             //Act
@@ -28,9 +31,10 @@ namespace Shindy.Tests.Data
         public void RetreivePerson()
         {
             //Arrange
+            PersonDataRepository repository = new PersonDataRepository();
 
             //Act
-            Person person = Person.Load(100);
+            PersonEntity person = repository.Load(100);
 
             //Assert
             Assert.True(person.PersonID > 0);
@@ -40,11 +44,13 @@ namespace Shindy.Tests.Data
         public void UpdatePerson()
         {
             //Arrange
-            Person person = Person.Load(100);
+            PersonDataRepository repository = new PersonDataRepository();
+            PersonEntity person = repository.Load(100);
+
             person.Email = "patrick.timothee@gmail.com";
 
             //Act
-            person.Persist();
+            repository.Update(person);
 
             //Assert
             Assert.True(person.PersonID > 0);

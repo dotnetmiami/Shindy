@@ -53,7 +53,9 @@
   <ItemGroup>
     <Compile Include="Event.cs" />
     <Compile Include="EventManager.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="IPersonRepository.cs" />
+    <Compile Include="PersonEntity.cs" />
+    <Compile Include="PersonDataRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
