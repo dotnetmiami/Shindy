@@ -54,6 +54,7 @@
     <Compile Include="EventEntity.cs" />
     <Compile Include="EventRepository.cs" />
     <Compile Include="IPersonRepository.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="LocationEntity.cs" />
     <Compile Include="PersonEntity.cs" />
     <Compile Include="PersonDataRepository.cs" />
