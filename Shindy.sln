@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Web", "src\Shindy.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Data", "src\Shindy.Data\Shindy.Data.csproj", "{22707717-7BB2-4F3B-98A1-18208F7C3979}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Model", "src\Shindy.Model\Shindy.Model.csproj", "{095AACE1-9B1B-4AAC-B619-FF306972EC21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{22707717-7BB2-4F3B-98A1-18208F7C3979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22707717-7BB2-4F3B-98A1-18208F7C3979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22707717-7BB2-4F3B-98A1-18208F7C3979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095AACE1-9B1B-4AAC-B619-FF306972EC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095AACE1-9B1B-4AAC-B619-FF306972EC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095AACE1-9B1B-4AAC-B619-FF306972EC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095AACE1-9B1B-4AAC-B619-FF306972EC21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
