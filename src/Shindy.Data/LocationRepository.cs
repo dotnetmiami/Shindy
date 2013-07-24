@@ -3,24 +3,24 @@ using Shindy.Model;
 
 namespace Shindy.Data
 {
-    public class EventRepository : IRepository<Event>
+    public class LocationRepository : IRepository<Location>
     {
-        public void Update(Event entity)
+        public void Update(Location entity)
         {
             throw new System.NotImplementedException();
         }
 
-        public Event GetById(int id)
+        public Location GetById(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<Event> GetAll()
+        public IEnumerable<Location> GetAll()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Delete(Event entity)
+        public void Delete(Location entity)
         {
             throw new System.NotImplementedException();
         }

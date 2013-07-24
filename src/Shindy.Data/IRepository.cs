@@ -1,10 +1,12 @@
-﻿namespace Shindy.Data
+﻿using System.Collections.Generic;
+
+namespace Shindy.Data
 {
     public interface IRepository<TEntity> where TEntity : class 
     {
         void Update(TEntity entity);
         TEntity GetById(int id);
-        void Save();
+        IEnumerable<TEntity> GetAll();
         void Delete(TEntity entity);
     }
 }

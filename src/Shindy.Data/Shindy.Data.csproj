@@ -51,13 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventEntity.cs" />
     <Compile Include="EventRepository.cs" />
-    <Compile Include="IPersonRepository.cs" />
     <Compile Include="IRepository.cs" />
-    <Compile Include="LocationEntity.cs" />
-    <Compile Include="PersonEntity.cs" />
-    <Compile Include="PersonDataRepository.cs" />
+    <Compile Include="LocationRepository.cs" />
+    <Compile Include="PersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorySettings.cs" />
   </ItemGroup>
@@ -66,6 +63,12 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shindy.Model\Shindy.Model.csproj">
+      <Project>{095AACE1-9B1B-4AAC-B619-FF306972EC21}</Project>
+      <Name>Shindy.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
