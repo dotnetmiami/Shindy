@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C7C73BEB-DC23-4644-A1CF-CD8E496330E8}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Shindy.Tests</RootNamespace>
     <AssemblyName>Shindy.Tests</AssemblyName>
@@ -39,10 +39,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Simple.Data.Core.0.18.3.1\lib\net40\Simple.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Simple.Data.Ado">
+    <Reference Include="Simple.Data.Ado, Version=0.18.3.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Simple.Data.Ado.0.18.3.1\lib\net40\Simple.Data.Ado.dll</HintPath>
     </Reference>
-    <Reference Include="Simple.Data.SqlServer">
+    <Reference Include="Simple.Data.SqlServer, Version=0.18.3.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Simple.Data.SqlServer.0.18.3.1\lib\net40\Simple.Data.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -57,7 +59,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\PersonTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +66,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Data\" />
     <Folder Include="Web\" />
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +76,6 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
