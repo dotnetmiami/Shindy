@@ -115,7 +115,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <PropertyGroup>
     <PostBuildEvent>
 if $(ConfigurationName) == Debug (
@@ -131,3 +130,4 @@ xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.17.1\lib\Net40\
   </Target>
   -->
 </Project>
+

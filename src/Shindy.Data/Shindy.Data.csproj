@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7C73BEB-DC23-4644-A1CF-CD8E496330E8}</ProjectGuid>
+    <ProjectGuid>{22707717-7BB2-4F3B-98A1-18208F7C3979}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Shindy.Tests</RootNamespace>
-    <AssemblyName>Shindy.Tests</AssemblyName>
+    <RootNamespace>Shindy.Data</RootNamespace>
+    <AssemblyName>Shindy.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,48 +31,41 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Simple.Data, Version=0.18.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Simple.Data">
       <HintPath>..\..\packages\Simple.Data.Core.0.18.3.1\lib\net40\Simple.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Simple.Data.Ado, Version=0.18.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Simple.Data.Ado">
       <HintPath>..\..\packages\Simple.Data.Ado.0.18.3.1\lib\net40\Simple.Data.Ado.dll</HintPath>
     </Reference>
-    <Reference Include="Simple.Data.SqlServer, Version=0.18.3.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Simple.Data.SqlServer">
       <HintPath>..\..\packages\Simple.Data.SqlServer.0.18.3.1\lib\net40\Simple.Data.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="xunit">
-      <HintPath>..\..\packages\xunit.1.9.1\lib\net20\xunit.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventRepository.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="LocationRepository.cs" />
+    <Compile Include="PersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositorySettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Web\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Shindy.Data\Shindy.Data.csproj">
-      <Project>{22707717-7bb2-4f3b-98a1-18208f7c3979}</Project>
-      <Name>Shindy.Data</Name>
+    <ProjectReference Include="..\Shindy.Model\Shindy.Model.csproj">
+      <Project>{095AACE1-9B1B-4AAC-B619-FF306972EC21}</Project>
+      <Name>Shindy.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
