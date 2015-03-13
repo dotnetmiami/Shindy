@@ -3,7 +3,7 @@ using Shindy.Model;
 
 namespace Shindy.Data
 {
-    public class LocationRepository : IRepository<Location>
+    public class LocationRepository : ILocationRepository
     {
         public void Update(Location entity)
         {

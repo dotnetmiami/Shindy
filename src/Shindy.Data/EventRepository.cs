@@ -3,7 +3,7 @@ using Shindy.Model;
 
 namespace Shindy.Data
 {
-    public class EventRepository : IRepository<Event>
+    public class EventRepository : IEventRepository
     {
         public void Update(Event entity)
         {

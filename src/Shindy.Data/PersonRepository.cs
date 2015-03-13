@@ -4,7 +4,7 @@ using Shindy.Model;
 
 namespace Shindy.Data
 {
-    public class PersonRepository : IRepository<Person>
+    public class PersonRepository : IPersonRepository
     {
         public void Update(Person entity)
         {
