@@ -17,7 +17,7 @@ namespace Shindy.Web.Api
 
         // GET api/<controller>/5
         public string Get(int id)
-        {
+        { 
             return "value";
         }
 
