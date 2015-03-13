@@ -32,15 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Simple.Data">
-      <HintPath>..\..\packages\Simple.Data.Core.0.18.3.1\lib\net40\Simple.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Simple.Data.Ado">
-      <HintPath>..\..\packages\Simple.Data.Ado.0.18.3.1\lib\net40\Simple.Data.Ado.dll</HintPath>
-    </Reference>
-    <Reference Include="Simple.Data.SqlServer">
-      <HintPath>..\..\packages\Simple.Data.SqlServer.0.18.3.1\lib\net40\Simple.Data.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -60,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shindy.Model\Shindy.Model.csproj">
