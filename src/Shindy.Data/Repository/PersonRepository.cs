@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Shindy.Model;
 
-namespace Shindy.Data
+namespace Shindy.Data.Repository
 {
     public class PersonRepository : IPersonRepository
     {
@@ -22,6 +22,16 @@ namespace Shindy.Data
         }
 
         public void Delete(Person entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Add(Person entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Save()
         {
             throw new NotImplementedException();
         }

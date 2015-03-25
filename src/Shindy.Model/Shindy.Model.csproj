@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,9 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attendee.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="EventSession.cs" />
+    <Compile Include="EventSponsor.cs" />
+    <Compile Include="Giveaway.cs" />
     <Compile Include="Location.cs" />
+    <Compile Include="Member.cs" />
+    <Compile Include="Organization.cs" />
+    <Compile Include="OrgEvent.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="SessionType.cs" />
+    <Compile Include="Speaker.cs" />
+    <Compile Include="Sponsor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

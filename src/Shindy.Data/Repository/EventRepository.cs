@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Shindy.Model;
 
-namespace Shindy.Data
+namespace Shindy.Data.Repository
 {
     public class EventRepository : IEventRepository
     {
@@ -21,6 +21,16 @@ namespace Shindy.Data
         }
 
         public void Delete(Event entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int Add(Event entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Save()
         {
             throw new System.NotImplementedException();
         }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Shindy.Model;
 
-namespace Shindy.Data
+namespace Shindy.Data.Repository
 {
     public class LocationRepository : ILocationRepository
     {
@@ -21,6 +21,16 @@ namespace Shindy.Data
         }
 
         public void Delete(Location entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int Add(Location entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Save()
         {
             throw new System.NotImplementedException();
         }

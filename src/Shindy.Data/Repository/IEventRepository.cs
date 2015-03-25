@@ -1,9 +1,8 @@
 ﻿using Shindy.Model;
 
-namespace Shindy.Data
+namespace Shindy.Data.Repository
 {
     public interface IEventRepository : IRepository<Event>
     {
-         
     }
 }
