@@ -1,14 +1,14 @@
 using System.Data.Entity.ModelConfiguration;
 using Shindy.Model;
 
-namespace Shindy.Data.Sql.Mapping
+namespace Shindy.Data.SqlServer.Mapping
 {
-    public class MemberMap : EntityTypeConfiguration<Member>
+    public class AttendeeMap : EntityTypeConfiguration<Attendee>
     {
-        public MemberMap()
+        public AttendeeMap()
         {
             // Primary Key
-            HasKey(t => t.MemberID);
+            HasKey(t => t.AttendeeID);
 
             // Properties
             Property(t => t.CreatedUser)
@@ -18,9 +18,9 @@ namespace Shindy.Data.Sql.Mapping
                 .HasMaxLength(50);
 
             // Table & Column Mappings
-            ToTable("Member");
-            Property(t => t.MemberID).HasColumnName("MemberID");
-            Property(t => t.OrgID).HasColumnName("OrgID");
+            ToTable("Attendee");
+            Property(t => t.AttendeeID).HasColumnName("Attendee_ID");
+            Property(t => t.EventID).HasColumnName("EventID");
             Property(t => t.PersonID).HasColumnName("PersonID");
             Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             Property(t => t.CreatedUser).HasColumnName("CreatedUser");
@@ -28,11 +28,11 @@ namespace Shindy.Data.Sql.Mapping
             Property(t => t.LastUpdatedUser).HasColumnName("LastUpdatedUser");
 
             // Relationships
-            HasRequired(t => t.Organization)
-                .WithMany(t => t.Members)
-                .HasForeignKey(d => d.OrgID);
+            HasRequired(t => t.Event)
+                .WithMany(t => t.Attendees)
+                .HasForeignKey(d => d.EventID);
             HasRequired(t => t.Person)
-                .WithMany(t => t.Members)
+                .WithMany(t => t.Attendees)
                 .HasForeignKey(d => d.PersonID);
 
         }

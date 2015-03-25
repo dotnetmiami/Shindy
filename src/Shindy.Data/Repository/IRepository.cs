@@ -4,7 +4,7 @@ namespace Shindy.Data.Repository
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        int Add(TEntity entity);
+        TEntity Add(TEntity entity);
         void Update(TEntity entity);
         TEntity GetById(int id);
         IEnumerable<TEntity> GetAll();

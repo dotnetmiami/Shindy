@@ -1,14 +1,20 @@
 using System.Data.Entity;
-using Shindy.Data.Sql.Mapping;
+using Shindy.Data.SqlServer.Mapping;
 using Shindy.Model;
 
-namespace Shindy.Data.Sql
+namespace Shindy.Data.SqlServer
 {
-    public class ShindyContext : DbContext
+    public class ShindyContext : DbContext, IShindyContext
     {
         static ShindyContext()
         {
             Database.SetInitializer<ShindyContext>(null);
+        }
+
+        public ShindyContext(string connectionString)
+            : base(connectionString)
+        {
+
         }
 
         public ShindyContext()
@@ -30,6 +36,11 @@ namespace Shindy.Data.Sql
         public DbSet<SessionType> SessionTypes { get; set; }
         public DbSet<Speaker> Speakers { get; set; }
         public DbSet<Sponsor> Sponsors { get; set; }
+
+        IDbSet<T> IShindyContext.Set<T>()
+        {
+            return base.Set<T>();
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

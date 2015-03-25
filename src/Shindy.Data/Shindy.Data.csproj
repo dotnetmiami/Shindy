@@ -49,29 +49,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repository\EventRepository.cs" />
-    <Compile Include="Repository\IEventRepository.cs" />
-    <Compile Include="Repository\ILocationRepository.cs" />
-    <Compile Include="Repository\IPersonRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\LocationRepository.cs" />
-    <Compile Include="Repository\PersonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sql\Mapping\AttendeeMap.cs" />
-    <Compile Include="Sql\Mapping\EventMap.cs" />
-    <Compile Include="Sql\Mapping\EventSessionMap.cs" />
-    <Compile Include="Sql\Mapping\EventSponsorMap.cs" />
-    <Compile Include="Sql\Mapping\GiveawayMap.cs" />
-    <Compile Include="Sql\Mapping\LocationMap.cs" />
-    <Compile Include="Sql\Mapping\MemberMap.cs" />
-    <Compile Include="Sql\Mapping\OrganizationMap.cs" />
-    <Compile Include="Sql\Mapping\OrgEventMap.cs" />
-    <Compile Include="Sql\Mapping\PersonMap.cs" />
-    <Compile Include="Sql\Mapping\SessionMap.cs" />
-    <Compile Include="Sql\Mapping\SessionTypeMap.cs" />
-    <Compile Include="Sql\Mapping\SpeakerMap.cs" />
-    <Compile Include="Sql\Mapping\SponsorMap.cs" />
-    <Compile Include="Sql\ShindyContext.cs" />
+    <Compile Include="SqlServer\GenericRepository.cs" />
+    <Compile Include="SqlServer\IShindyContext.cs" />
+    <Compile Include="SqlServer\Mapping\AttendeeMap.cs" />
+    <Compile Include="SqlServer\Mapping\EventMap.cs" />
+    <Compile Include="SqlServer\Mapping\EventSessionMap.cs" />
+    <Compile Include="SqlServer\Mapping\EventSponsorMap.cs" />
+    <Compile Include="SqlServer\Mapping\GiveawayMap.cs" />
+    <Compile Include="SqlServer\Mapping\LocationMap.cs" />
+    <Compile Include="SqlServer\Mapping\MemberMap.cs" />
+    <Compile Include="SqlServer\Mapping\OrganizationMap.cs" />
+    <Compile Include="SqlServer\Mapping\OrgEventMap.cs" />
+    <Compile Include="SqlServer\Mapping\PersonMap.cs" />
+    <Compile Include="SqlServer\Mapping\SessionMap.cs" />
+    <Compile Include="SqlServer\Mapping\SessionTypeMap.cs" />
+    <Compile Include="SqlServer\Mapping\SpeakerMap.cs" />
+    <Compile Include="SqlServer\Mapping\SponsorMap.cs" />
+    <Compile Include="SqlServer\ShindyContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

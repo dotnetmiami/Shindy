@@ -1,14 +1,14 @@
 using System.Data.Entity.ModelConfiguration;
 using Shindy.Model;
 
-namespace Shindy.Data.Sql.Mapping
+namespace Shindy.Data.SqlServer.Mapping
 {
-    public class EventSponsorMap : EntityTypeConfiguration<EventSponsor>
+    public class OrgEventMap : EntityTypeConfiguration<OrgEvent>
     {
-        public EventSponsorMap()
+        public OrgEventMap()
         {
             // Primary Key
-            HasKey(t => t.EventSponsorID);
+            HasKey(t => t.OrgEventID);
 
             // Properties
             Property(t => t.CreatedUser)
@@ -18,10 +18,10 @@ namespace Shindy.Data.Sql.Mapping
                 .HasMaxLength(50);
 
             // Table & Column Mappings
-            ToTable("EventSponsor");
-            Property(t => t.EventSponsorID).HasColumnName("EventSponsorID");
+            ToTable("OrgEvent");
+            Property(t => t.OrgEventID).HasColumnName("OrgEventID");
+            Property(t => t.OrgID).HasColumnName("OrgID");
             Property(t => t.EventID).HasColumnName("EventID");
-            Property(t => t.SponsorID).HasColumnName("SponsorID");
             Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             Property(t => t.CreatedUser).HasColumnName("CreatedUser");
             Property(t => t.LastUpdatedDate).HasColumnName("LastUpdatedDate");
@@ -29,11 +29,11 @@ namespace Shindy.Data.Sql.Mapping
 
             // Relationships
             HasRequired(t => t.Event)
-                .WithMany(t => t.EventSponsors)
+                .WithMany(t => t.OrgEvents)
                 .HasForeignKey(d => d.EventID);
-            HasRequired(t => t.Sponsor)
-                .WithMany(t => t.EventSponsors)
-                .HasForeignKey(d => d.SponsorID);
+            HasRequired(t => t.Organization)
+                .WithMany(t => t.OrgEvents)
+                .HasForeignKey(d => d.OrgID);
 
         }
     }

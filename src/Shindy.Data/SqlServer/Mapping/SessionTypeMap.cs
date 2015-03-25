@@ -1,22 +1,22 @@
 using System.Data.Entity.ModelConfiguration;
 using Shindy.Model;
 
-namespace Shindy.Data.Sql.Mapping
+namespace Shindy.Data.SqlServer.Mapping
 {
-    public class SessionMap : EntityTypeConfiguration<Session>
+    public class SessionTypeMap : EntityTypeConfiguration<SessionType>
     {
-        public SessionMap()
+        public SessionTypeMap()
         {
             // Primary Key
-            HasKey(t => t.SessionID);
+            HasKey(t => t.SessionTypeID);
 
             // Properties
-            Property(t => t.Title)
+            Property(t => t.SessionTypeName)
                 .IsRequired()
                 .HasMaxLength(100);
 
-            Property(t => t.Abstract)
-                .HasMaxLength(4000);
+            Property(t => t.Description)
+                .HasMaxLength(250);
 
             Property(t => t.CreatedUser)
                 .HasMaxLength(50);
@@ -25,21 +25,14 @@ namespace Shindy.Data.Sql.Mapping
                 .HasMaxLength(50);
 
             // Table & Column Mappings
-            ToTable("Session");
-            Property(t => t.SessionID).HasColumnName("SessionID");
-            Property(t => t.Title).HasColumnName("Title");
-            Property(t => t.Abstract).HasColumnName("Abstract");
+            ToTable("SessionType");
             Property(t => t.SessionTypeID).HasColumnName("SessionTypeID");
+            Property(t => t.SessionTypeName).HasColumnName("SessionTypeName");
+            Property(t => t.Description).HasColumnName("Description");
             Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             Property(t => t.CreatedUser).HasColumnName("CreatedUser");
             Property(t => t.LastUpdatedDate).HasColumnName("LastUpdatedDate");
             Property(t => t.LastUpdatedUser).HasColumnName("LastUpdatedUser");
-
-            // Relationships
-            HasRequired(t => t.SessionType)
-                .WithMany(t => t.Sessions)
-                .HasForeignKey(d => d.SessionTypeID);
-
         }
     }
 }

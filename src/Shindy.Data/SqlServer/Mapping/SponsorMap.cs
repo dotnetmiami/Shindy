@@ -1,7 +1,7 @@
 using System.Data.Entity.ModelConfiguration;
 using Shindy.Model;
 
-namespace Shindy.Data.Sql.Mapping
+namespace Shindy.Data.SqlServer.Mapping
 {
     public class SponsorMap : EntityTypeConfiguration<Sponsor>
     {

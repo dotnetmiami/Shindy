@@ -1,21 +1,21 @@
 using System.Data.Entity.ModelConfiguration;
 using Shindy.Model;
 
-namespace Shindy.Data.Sql.Mapping
+namespace Shindy.Data.SqlServer.Mapping
 {
-    public class SessionTypeMap : EntityTypeConfiguration<SessionType>
+    public class OrganizationMap : EntityTypeConfiguration<Organization>
     {
-        public SessionTypeMap()
+        public OrganizationMap()
         {
             // Primary Key
-            HasKey(t => t.SessionTypeID);
+            HasKey(t => t.OrgID);
 
             // Properties
-            Property(t => t.SessionTypeName)
+            Property(t => t.OrgName)
                 .IsRequired()
                 .HasMaxLength(100);
 
-            Property(t => t.Description)
+            Property(t => t.OrgDescription)
                 .HasMaxLength(250);
 
             Property(t => t.CreatedUser)
@@ -25,10 +25,10 @@ namespace Shindy.Data.Sql.Mapping
                 .HasMaxLength(50);
 
             // Table & Column Mappings
-            ToTable("SessionType");
-            Property(t => t.SessionTypeID).HasColumnName("SessionTypeID");
-            Property(t => t.SessionTypeName).HasColumnName("SessionTypeName");
-            Property(t => t.Description).HasColumnName("Description");
+            ToTable("Organization");
+            Property(t => t.OrgID).HasColumnName("OrgID");
+            Property(t => t.OrgName).HasColumnName("OrgName");
+            Property(t => t.OrgDescription).HasColumnName("OrgDescription");
             Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             Property(t => t.CreatedUser).HasColumnName("CreatedUser");
             Property(t => t.LastUpdatedDate).HasColumnName("LastUpdatedDate");
