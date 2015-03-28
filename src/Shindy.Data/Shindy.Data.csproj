@@ -73,9 +73,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shindy.Model\Shindy.Model.csproj">
+    <ProjectReference Include="..\Shindy.Model\Shindy.Core.csproj">
       <Project>{095AACE1-9B1B-4AAC-B619-FF306972EC21}</Project>
-      <Name>Shindy.Model</Name>
+      <Name>Shindy.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

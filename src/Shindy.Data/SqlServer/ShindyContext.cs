@@ -1,6 +1,6 @@
 using System.Data.Entity;
+using Shindy.Core.Entities;
 using Shindy.Data.SqlServer.Mapping;
-using Shindy.Model;
 
 namespace Shindy.Data.SqlServer
 {

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Tests", "src\Shindy.Tests\Shindy.Tests.csproj", "{C7C73BEB-DC23-4644-A1CF-CD8E496330E8}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Web", "src\Shindy.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Data", "src\Shindy.Data\Shindy.Data.csproj", "{22707717-7BB2-4F3B-98A1-18208F7C3979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Model", "src\Shindy.Model\Shindy.Model.csproj", "{095AACE1-9B1B-4AAC-B619-FF306972EC21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shindy.Core", "src\Shindy.Model\Shindy.Core.csproj", "{095AACE1-9B1B-4AAC-B619-FF306972EC21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

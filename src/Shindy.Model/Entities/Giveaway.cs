@@ -1,6 +1,6 @@
 using System;
 
-namespace Shindy.Model
+namespace Shindy.Core.Entities
 {
     public class Giveaway
     {

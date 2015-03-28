@@ -7,8 +7,8 @@
     <ProjectGuid>{095AACE1-9B1B-4AAC-B619-FF306972EC21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Shindy.Model</RootNamespace>
-    <AssemblyName>Shindy.Model</AssemblyName>
+    <RootNamespace>Shindy.Core</RootNamespace>
+    <AssemblyName>Shindy.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,20 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attendee.cs" />
-    <Compile Include="Event.cs" />
-    <Compile Include="EventSession.cs" />
-    <Compile Include="EventSponsor.cs" />
-    <Compile Include="Giveaway.cs" />
-    <Compile Include="Location.cs" />
-    <Compile Include="Member.cs" />
-    <Compile Include="Organization.cs" />
-    <Compile Include="OrgEvent.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="Session.cs" />
-    <Compile Include="SessionType.cs" />
-    <Compile Include="Speaker.cs" />
-    <Compile Include="Sponsor.cs" />
+    <Compile Include="Entities\Attendee.cs" />
+    <Compile Include="Entities\Event.cs" />
+    <Compile Include="Entities\EventSession.cs" />
+    <Compile Include="Entities\EventSponsor.cs" />
+    <Compile Include="Entities\Giveaway.cs" />
+    <Compile Include="Entities\Location.cs" />
+    <Compile Include="Entities\Member.cs" />
+    <Compile Include="Entities\Organization.cs" />
+    <Compile Include="Entities\OrgEvent.cs" />
+    <Compile Include="Entities\Person.cs" />
+    <Compile Include="Entities\Session.cs" />
+    <Compile Include="Entities\SessionType.cs" />
+    <Compile Include="Entities\Speaker.cs" />
+    <Compile Include="Entities\Sponsor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

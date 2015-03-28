@@ -1,7 +1,6 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-
-using Shindy.Model;
+using Shindy.Core.Entities;
 
 namespace Shindy.Data.SqlServer
 {

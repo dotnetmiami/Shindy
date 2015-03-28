@@ -1,5 +1,5 @@
 using System.Data.Entity.ModelConfiguration;
-using Shindy.Model;
+using Shindy.Core.Entities;
 
 namespace Shindy.Data.SqlServer.Mapping
 {

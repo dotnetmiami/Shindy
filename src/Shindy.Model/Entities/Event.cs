@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Shindy.Model
+namespace Shindy.Core.Entities
 {
     public class Event
     {
