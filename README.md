@@ -5,7 +5,7 @@ Shindy is joined community effort to create and unify the way local User Groups 
 
 This project is licensed under the MIT OSS license. See [license](https://github.com/dotnetmiami/Shindy/blob/dev/license.txt)
 
-*More to be added...*
+[![Build Status](https://travis-ci.org/dotnetmiami/Shindy.svg?branch=master)](https://travis-ci.org/dotnetmiami/Shindy)
 
 ## Contributing
 
