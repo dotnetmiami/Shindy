@@ -151,10 +151,10 @@ ELSE
 go
 
 /* 
- * TABLE: Group 
+ * TABLE: User_Group 
  */
 
-CREATE TABLE Group(
+CREATE TABLE User_Group(
     Group_ID             int              IDENTITY(100,1),
     Group_Name           nvarchar(100)    NOT NULL,
     Group_Description    varchar(250)     NULL,
@@ -168,10 +168,10 @@ go
 
 
 
-IF OBJECT_ID('Group') IS NOT NULL
-    PRINT '<<< CREATED TABLE Group >>>'
+IF OBJECT_ID('User_Group') IS NOT NULL
+    PRINT '<<< CREATED TABLE User_Group >>>'
 ELSE
-    PRINT '<<< FAILED CREATING TABLE Group >>>'
+    PRINT '<<< FAILED CREATING TABLE User_Group >>>'
 go
 
 /* 
@@ -411,12 +411,12 @@ go
  * INDEX: ak_Group__Group_Name 
  */
 
-CREATE UNIQUE INDEX ak_Group__Group_Name ON Group(Group_Name)
+CREATE UNIQUE INDEX ak_Group__Group_Name ON User_Group(Group_Name)
 go
-IF EXISTS (SELECT * FROM sys.indexes WHERE object_id=OBJECT_ID('Group') AND name='ak_Group__Group_Name')
-    PRINT '<<< CREATED INDEX Group.ak_Group__Group_Name >>>'
+IF EXISTS (SELECT * FROM sys.indexes WHERE object_id=OBJECT_ID('User_Group') AND name='ak_Group__Group_Name')
+    PRINT '<<< CREATED INDEX User_Group.ak_Group__Group_Name >>>'
 ELSE
-    PRINT '<<< FAILED CREATING INDEX Group.ak_Group__Group_Name >>>'
+    PRINT '<<< FAILED CREATING INDEX User_Group.ak_Group__Group_Name >>>'
 go
 
 /* 
@@ -471,7 +471,7 @@ go
  * TABLE: Event 
  */
 
-ALTER TABLE Event ADD CONSTRAINT RefLocation82 
+ALTER TABLE Event ADD CONSTRAINT fk_Event_Location_ID__Location_Location_ID 
     FOREIGN KEY (Location_ID)
     REFERENCES Location(Location_ID)
 go
@@ -481,12 +481,12 @@ go
  * TABLE: Event_Group 
  */
 
-ALTER TABLE Event_Group ADD CONSTRAINT RefGroup80 
+ALTER TABLE Event_Group ADD CONSTRAINT fk_Event_Group_Group_ID__User_Group_Group_ID 
     FOREIGN KEY (Group_ID)
-    REFERENCES Group(Group_ID)
+    REFERENCES [User_Group](Group_ID)
 go
 
-ALTER TABLE Event_Group ADD CONSTRAINT RefEvent81 
+ALTER TABLE Event_Group ADD CONSTRAINT fk_Event_Group_Group_ID__Event_Event_ID 
     FOREIGN KEY (Event_ID)
     REFERENCES Event(Event_ID)
 go
@@ -496,12 +496,12 @@ go
  * TABLE: Event_Person 
  */
 
-ALTER TABLE Event_Person ADD CONSTRAINT RefPerson68 
+ALTER TABLE Event_Person ADD CONSTRAINT fk_Event_Person_Person_ID__Person_Person_ID 
     FOREIGN KEY (Person_ID)
     REFERENCES Person(Person_ID)
 go
 
-ALTER TABLE Event_Person ADD CONSTRAINT RefEvent69 
+ALTER TABLE Event_Person ADD CONSTRAINT fk_Event_Person_Event_ID_Person_Person_ID 
     FOREIGN KEY (Event_ID)
     REFERENCES Event(Event_ID)
 go
@@ -511,12 +511,12 @@ go
  * TABLE: Event_Session 
  */
 
-ALTER TABLE Event_Session ADD CONSTRAINT RefSession70 
+ALTER TABLE Event_Session ADD CONSTRAINT fk_Event_Session_Session_ID__Session_Session_ID 
     FOREIGN KEY (Session_ID)
     REFERENCES Session(Session_ID)
 go
 
-ALTER TABLE Event_Session ADD CONSTRAINT RefEvent71 
+ALTER TABLE Event_Session ADD CONSTRAINT fk_Event_Session_Event_ID__Event_Event_ID 
     FOREIGN KEY (Event_ID)
     REFERENCES Event(Event_ID)
 go
@@ -526,12 +526,12 @@ go
  * TABLE: Event_Sponsor 
  */
 
-ALTER TABLE Event_Sponsor ADD CONSTRAINT RefSponsor72 
+ALTER TABLE Event_Sponsor ADD CONSTRAINT fk_Event_Sponsor_Sponsor_ID__Sponsor_Sponsor_ID 
     FOREIGN KEY (Sponsor_ID)
     REFERENCES Sponsor(Sponsor_ID)
 go
 
-ALTER TABLE Event_Sponsor ADD CONSTRAINT RefEvent73 
+ALTER TABLE Event_Sponsor ADD CONSTRAINT fk_Event_Sponsor_Event_ID__Event_Event_ID 
     FOREIGN KEY (Event_ID)
     REFERENCES Event(Event_ID)
 go
@@ -541,17 +541,17 @@ go
  * TABLE: Giveaway 
  */
 
-ALTER TABLE Giveaway ADD CONSTRAINT RefSponsor83 
+ALTER TABLE Giveaway ADD CONSTRAINT fk_Giveaway_Sponsor_ID__Sponsor_Sponsor_ID 
     FOREIGN KEY (Sponsor_ID)
     REFERENCES Sponsor(Sponsor_ID)
 go
 
-ALTER TABLE Giveaway ADD CONSTRAINT RefPerson84 
+ALTER TABLE Giveaway ADD CONSTRAINT fk_Giveaway_Person_ID__Person_ID 
     FOREIGN KEY (Person_ID)
     REFERENCES Person(Person_ID)
 go
 
-ALTER TABLE Giveaway ADD CONSTRAINT RefEvent85 
+ALTER TABLE Giveaway ADD CONSTRAINT fk_Giveaway_Event_ID__Event_Event_ID 
     FOREIGN KEY (Event_ID)
     REFERENCES Event(Event_ID)
 go
@@ -561,14 +561,14 @@ go
  * TABLE: Group_Person 
  */
 
-ALTER TABLE Group_Person ADD CONSTRAINT RefPerson74 
+ALTER TABLE Group_Person ADD CONSTRAINT fk_Group_Person_Person_ID__Person_Person_ID 
     FOREIGN KEY (Person_ID)
     REFERENCES Person(Person_ID)
 go
 
-ALTER TABLE Group_Person ADD CONSTRAINT RefGroup75 
+ALTER TABLE Group_Person ADD CONSTRAINT fk_Group_Person_Group_ID__User_Group_Group_ID 
     FOREIGN KEY (Group_ID)
-    REFERENCES Group(Group_ID)
+    REFERENCES User_Group(Group_ID)
 go
 
 
@@ -576,7 +576,7 @@ go
  * TABLE: Session 
  */
 
-ALTER TABLE Session ADD CONSTRAINT RefSession_Type18 
+ALTER TABLE Session ADD CONSTRAINT fk_SessionSession_Type_ID__Session_Type_Session_Type_ID 
     FOREIGN KEY (Session_Type_ID)
     REFERENCES Session_Type(Session_Type_ID)
 go
@@ -586,12 +586,12 @@ go
  * TABLE: Session_Person 
  */
 
-ALTER TABLE Session_Person ADD CONSTRAINT RefPerson86 
+ALTER TABLE Session_Person ADD CONSTRAINT fk_Session_Person_Person_ID__Person_Person_ID 
     FOREIGN KEY (Person_ID)
     REFERENCES Person(Person_ID)
 go
 
-ALTER TABLE Session_Person ADD CONSTRAINT RefSession87 
+ALTER TABLE Session_Person ADD CONSTRAINT fk_Session_Person_Session_ID__Session_Session_ID 
     FOREIGN KEY (Session_ID)
     REFERENCES Session(Session_ID)
 go
