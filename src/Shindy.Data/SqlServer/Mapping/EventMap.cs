@@ -23,7 +23,7 @@ namespace Shindy.Data.SqlServer.Mapping
             Property(t => t.CreatedUser)
                 .HasMaxLength(50);
 
-            Property(t => t.LastUpdatedUser)
+            Property(t => t.UpdatedUser)
                 .HasMaxLength(50);
 
             // Table & Column Mappings
@@ -37,8 +37,8 @@ namespace Shindy.Data.SqlServer.Mapping
             Property(t => t.RegistrationURI).HasColumnName("RegistrationURI");
             Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             Property(t => t.CreatedUser).HasColumnName("CreatedUser");
-            Property(t => t.LastUpdatedDate).HasColumnName("LastUpdatedDate");
-            Property(t => t.LastUpdatedUser).HasColumnName("LastUpdatedUser");
+            Property(t => t.UpdatedDate).HasColumnName("UpdatedDate");
+            Property(t => t.UpdatedUser).HasColumnName("UpdatedUser");
 
             // Relationships
             HasOptional(t => t.Location)

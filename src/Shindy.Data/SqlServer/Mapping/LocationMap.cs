@@ -11,7 +11,7 @@ namespace Shindy.Data.SqlServer.Mapping
             HasKey(t => t.LocationID);
 
             // Properties
-            Property(t => t.LocationName)
+            Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(100);
 
@@ -39,13 +39,13 @@ namespace Shindy.Data.SqlServer.Mapping
             Property(t => t.CreatedUser)
                 .HasMaxLength(50);
 
-            Property(t => t.LastUpdatedUser)
+            Property(t => t.UpdatedUser)
                 .HasMaxLength(50);
 
             // Table & Column Mappings
             ToTable("Location");
             Property(t => t.LocationID).HasColumnName("LocationID");
-            Property(t => t.LocationName).HasColumnName("LocationName");
+            Property(t => t.Name).HasColumnName("LocationName");
             Property(t => t.LocationURI).HasColumnName("LocationURI");
             Property(t => t.Street1).HasColumnName("Street1");
             Property(t => t.Street2).HasColumnName("Street2");
@@ -57,8 +57,8 @@ namespace Shindy.Data.SqlServer.Mapping
             Property(t => t.Longitude).HasColumnName("Longitude");
             Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             Property(t => t.CreatedUser).HasColumnName("CreatedUser");
-            Property(t => t.LastUpdatedDate).HasColumnName("LastUpdatedDate");
-            Property(t => t.LastUpdatedUser).HasColumnName("LastUpdatedUser");
+            Property(t => t.UpdatedDate).HasColumnName("UpdatedDate");
+            Property(t => t.UpdatedUser).HasColumnName("UpdatedUser");
         }
     }
 }

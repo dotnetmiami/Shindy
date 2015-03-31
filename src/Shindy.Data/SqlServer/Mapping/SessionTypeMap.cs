@@ -11,7 +11,7 @@ namespace Shindy.Data.SqlServer.Mapping
             HasKey(t => t.SessionTypeID);
 
             // Properties
-            Property(t => t.SessionTypeName)
+            Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(100);
 
@@ -21,18 +21,18 @@ namespace Shindy.Data.SqlServer.Mapping
             Property(t => t.CreatedUser)
                 .HasMaxLength(50);
 
-            Property(t => t.LastUpdatedUser)
+            Property(t => t.UpdatedUser)
                 .HasMaxLength(50);
 
             // Table & Column Mappings
             ToTable("SessionType");
             Property(t => t.SessionTypeID).HasColumnName("SessionTypeID");
-            Property(t => t.SessionTypeName).HasColumnName("SessionTypeName");
+            Property(t => t.Name).HasColumnName("SessionTypeName");
             Property(t => t.Description).HasColumnName("Description");
             Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             Property(t => t.CreatedUser).HasColumnName("CreatedUser");
-            Property(t => t.LastUpdatedDate).HasColumnName("LastUpdatedDate");
-            Property(t => t.LastUpdatedUser).HasColumnName("LastUpdatedUser");
+            Property(t => t.UpdatedDate).HasColumnName("UpdatedDate");
+            Property(t => t.UpdatedUser).HasColumnName("UpdatedUser");
         }
     }
 }

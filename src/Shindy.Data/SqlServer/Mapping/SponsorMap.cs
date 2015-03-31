@@ -11,7 +11,7 @@ namespace Shindy.Data.SqlServer.Mapping
             HasKey(t => t.SponsorID);
 
             // Properties
-            Property(t => t.SponsorName)
+            Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(100);
 
@@ -24,19 +24,19 @@ namespace Shindy.Data.SqlServer.Mapping
             Property(t => t.CreatedUser)
                 .HasMaxLength(50);
 
-            Property(t => t.LastUpdatedUser)
+            Property(t => t.UpdatedUser)
                 .HasMaxLength(50);
 
             // Table & Column Mappings
             ToTable("Sponsor");
             Property(t => t.SponsorID).HasColumnName("SponsorID");
-            Property(t => t.SponsorName).HasColumnName("SponsorName");
+            Property(t => t.Name).HasColumnName("SponsorName");
             Property(t => t.SponsorURI).HasColumnName("SponsorURI");
             Property(t => t.ImageURI).HasColumnName("ImageURI");
             Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             Property(t => t.CreatedUser).HasColumnName("CreatedUser");
-            Property(t => t.LastUpdatedDate).HasColumnName("LastUpdatedDate");
-            Property(t => t.LastUpdatedUser).HasColumnName("LastUpdatedUser");
+            Property(t => t.UpdatedDate).HasColumnName("UpdatedDate");
+            Property(t => t.UpdatedUser).HasColumnName("UpdatedUser");
         }
     }
 }

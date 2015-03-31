@@ -11,7 +11,7 @@ namespace Shindy.Core.Entities
         }
 
         public int LocationID { get; set; }
-        public string LocationName { get; set; }
+        public string Name { get; set; }
         public string LocationURI { get; set; }
         public string Street1 { get; set; }
         public string Street2 { get; set; }
@@ -23,8 +23,8 @@ namespace Shindy.Core.Entities
         public decimal? Longitude { get; set; }
         public DateTime? CreatedDate { get; set; }
         public string CreatedUser { get; set; }
-        public DateTime LastUpdatedDate { get; set; }
-        public string LastUpdatedUser { get; set; }
+        public DateTime UpdatedDate { get; set; }
+        public string UpdatedUser { get; set; }
         public virtual ICollection<Event> Events { get; set; }
     }
 }

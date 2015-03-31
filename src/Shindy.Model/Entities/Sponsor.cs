@@ -12,13 +12,13 @@ namespace Shindy.Core.Entities
         }
 
         public int SponsorID { get; set; }
-        public string SponsorName { get; set; }
+        public string Name { get; set; }
         public string SponsorURI { get; set; }
         public string ImageURI { get; set; }
         public DateTime? CreatedDate { get; set; }
         public string CreatedUser { get; set; }
-        public DateTime LastUpdatedDate { get; set; }
-        public string LastUpdatedUser { get; set; }
+        public DateTime UpdatedDate { get; set; }
+        public string UpdatedUser { get; set; }
         public virtual ICollection<EventSponsor> EventSponsors { get; set; }
         public virtual ICollection<Giveaway> Giveaways { get; set; }
     }

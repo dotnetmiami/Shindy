@@ -9,10 +9,10 @@
     [Bio]             NVARCHAR (4000) NULL,
     [PhotoURI]        VARCHAR (2000)  NULL,
     [Zip]             VARCHAR (10)    NULL,
-    [CreatedDate]     DATETIME2 (7)   DEFAULT (sysdatetime()) NULL,
+    [CreatedDate]     DATETIME2 (7)   DEFAULT (sysdatetime()) NOT NULL,
     [CreatedUser]     NVARCHAR (50)   NULL,
-    [LastUpdatedDate] DATETIME2 (7)   DEFAULT (sysdatetime()) NOT NULL,
-    [LastUpdatedUser] NVARCHAR (50)   NULL,
+    [UpdatedDate]     DATETIME2 (7)   DEFAULT (sysdatetime()) NOT NULL,
+    [UpdatedUser]     NVARCHAR (50)   NULL,
     CONSTRAINT [pk_Person__Person_ID] PRIMARY KEY CLUSTERED ([PersonID] ASC)
 );
 
