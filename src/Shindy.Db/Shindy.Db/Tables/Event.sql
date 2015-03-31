@@ -6,10 +6,10 @@
     [EndDate]         DATETIME2 (0)   NULL,
     [LocationID]      INT             NULL,
     [RegistrationURI] VARCHAR (2000)  NULL,
-    [CreatedDate]     DATETIME2 (7)   DEFAULT (sysdatetime()) NULL,
+    [CreatedDate]     DATETIME2 (7)   DEFAULT (sysdatetime()) NOT NULL,
     [CreatedUser]     NVARCHAR (50)   NULL,
-    [LastUpdatedDate] DATETIME2 (7)   DEFAULT (sysdatetime()) NOT NULL,
-    [LastUpdatedUser] NVARCHAR (50)   NULL,
+    [UpdatedDate]     DATETIME2 (7)   DEFAULT (sysdatetime()) NOT NULL,
+    [UpdatedUser]     NVARCHAR (50)   NULL,
     CONSTRAINT [pk_Event__Event_ID] PRIMARY KEY CLUSTERED ([EventID] ASC),
     CONSTRAINT [FK_LocationEvent] FOREIGN KEY ([LocationID]) REFERENCES [dbo].[Location] ([LocationID])
 );

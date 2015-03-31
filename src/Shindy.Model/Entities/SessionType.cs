@@ -11,12 +11,12 @@ namespace Shindy.Core.Entities
         }
 
         public int SessionTypeID { get; set; }
-        public string SessionTypeName { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         public DateTime? CreatedDate { get; set; }
         public string CreatedUser { get; set; }
-        public DateTime LastUpdatedDate { get; set; }
-        public string LastUpdatedUser { get; set; }
+        public DateTime UpdatedDate { get; set; }
+        public string UpdatedUser { get; set; }
         public virtual ICollection<Session> Sessions { get; set; }
     }
 }
