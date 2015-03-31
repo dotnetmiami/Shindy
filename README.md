@@ -5,7 +5,9 @@ Shindy is joined community effort to create and unify the way local User Groups 
 
 This project is licensed under the MIT OSS license. See [license](https://github.com/dotnetmiami/Shindy/blob/dev/license.txt)
 
-[![Build Status](https://travis-ci.org/dotnetmiami/Shindy.svg?branch=master)](https://travis-ci.org/dotnetmiami/Shindy)
+[![Build status](https://ci.appveyor.com/api/projects/status/7l1mnynbqj27nbay?svg=true)](https://ci.appveyor.com/project/janierdavila/shindy)
+
+
 
 ## Contributing
 
@@ -20,11 +22,10 @@ See our [Coding Guidelines](https://github.com/dotnetmiami/Shindy/blob/master/Co
 
 ### Project Workflow
 
-Our workflow is loosely based on [Github Flow](http://scottchacon.com/2011/08/31/github-flow.html). We actively develop in the **dev** branch. This means that all pull requests by contributors need to be developed and submitted to the dev branch.
-The master branch always matches the current release.
+Our workflow is loosely based on [Github Flow](http://scottchacon.com/2011/08/31/github-flow.html). We actively develop in our current fork, even when we have access to the main repository. This means that all pull requests by contributors (and owners) need to come from their respective fork. Most of the time, it will make sense to create your own feature branch in your own fork and create a pull request from it. Creating a pull request allows the community to comment on your work and provide feedback before it gets merged to master.
 
-When the end of a milestone is coming up, we create a branch called **release** to stabilize the build for the upcoming release.
-The release is then merged into master and deleted and the cycle continues until the end of the next milestone.
+The master branch always matches the current release.
+  
 
 ### Submitting Pull requests
 
@@ -101,14 +102,7 @@ We realize there several ways to work with Git with many flows. This is the one 
         
             git rebase origin/master
         
-    3.  __Test your changes with the new code integrated.__
-        This would be a good time to run your full suite of unit and integration tests.
-        
-            git clean -xdf
-            .\Build-Solution.ps1
-            
-        The first command cleans any untracked files that could get in the way of a good commit.
-
+  
 5.  __Integrate your changes into the master branch.__
     Now that your topic branch has a clean history, it's easy to use `git rebase` to integrate
     your changes into the master branch with the following three commands. Note that the 
