@@ -48,6 +48,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <SqlTargetName>Shindy</SqlTargetName>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -76,5 +77,8 @@
     <Build Include="Tables\Session.sql" />
     <Build Include="Tables\SessionType.sql" />
     <Build Include="Tables\Speaker.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shindy.Db.publish.xml" />
   </ItemGroup>
 </Project>
