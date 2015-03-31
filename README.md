@@ -25,7 +25,7 @@ read this [https://help.github.com/articles/using-pull-requests](https://help.gi
 
 **Tests**
 
--  We use [XUnit](http://xunit.codeplex.com/) as testing framework
+-  We use [xUnit](https://github.com/xunit/xunit/) as testing framework
 -  Tests need to be provided for every bug/feature that is completed.
 -  Tests only need to be present for issues that need to be verified by QA (e.g. not tasks)
 -  If there is a scenario that is far too hard to test there does not need to be a test for it.
