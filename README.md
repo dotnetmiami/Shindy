@@ -7,15 +7,6 @@ This project is licensed under the MIT OSS license. See [license](https://github
 
 [![Build status](https://ci.appveyor.com/api/projects/status/7l1mnynbqj27nbay?svg=true)](https://ci.appveyor.com/project/janierdavila/shindy)
 
-
-
-## Contributing
-
-See our [Trello board](https://trello.com/board/shindy-user-group-web-app/515d8d0ceb07c5370f003e67)
-
-**Please note:** We use [Nuget package restore](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages)
-
-
 ### Coding guidelines
 
 See our [Coding Guidelines](https://github.com/dotnetmiami/Shindy/blob/master/CodingGuidelines.md)
