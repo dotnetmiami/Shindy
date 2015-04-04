@@ -116,13 +116,13 @@
     <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Shindy.Core\Shindy.Core.csproj">
+      <Project>{095aace1-9b1b-4aac-b619-ff306972ec21}</Project>
+      <Name>Shindy.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Shindy.Data\Shindy.Data.csproj">
       <Project>{22707717-7bb2-4f3b-98a1-18208f7c3979}</Project>
       <Name>Shindy.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Shindy.Model\Shindy.Core.csproj">
-      <Project>{095aace1-9b1b-4aac-b619-ff306972ec21}</Project>
-      <Name>Shindy.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
